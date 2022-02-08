@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+ <html>
+ <body>
+ 
+ 
+ <form onsubmit="validate()">
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="Submit">
+    </form>
+  
+    <script>
+        function Geeks() {
+			var s=document.getElementByName("array[]")
+			var a=[]; // even number array
+			var b=[]; //odd number array
+			for(int i=0;i<s.length;i++){
+			if(s[i]%2==0)
+			a.push(s[i]);
+			else
+			b.push(s[i]);
+			}
+			document.write(a);
+			
+        }
+    </script>
+</body>
+  
+</html>

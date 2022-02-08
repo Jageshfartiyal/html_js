@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<style>
+			form{
+					border: 2px solid black;
+					width: fit-content;
+					text-align:center;
+					background-color:RGB(240,235,210);
+					right-align:200px;
+				}
+			label{
+				display:inline-block;
+				width:150px;
+			}
+</style>
+<body> <script>
+function disp(){
+
+var first=document.getElementById("fname").value;
+var last=document.getElementById("lname").value;
+var father=document.getElementById("father").value;
+var mother=document.getElementById("mother").value;
+var nation=document.getElementById("nation").value;
+var zip=document.getElementById("code").value;
+var date=document.getElementById("dob").value;
+var mail=document.getElementById("mail").value;
+var address=document.getElementById("address").value;
+
+var gender=validate();
+
+
+
+document.write("Name : " + first + " " + last);
+document.write("<br>Gender :" + gender);
+document.write(" <br>Father's Name : " + father);
+document.write("<br>Mother'sName : " + mother);
+document.write("<br>Nation : " + nation);
+document.write("<br>Zip Code : " + zip);
+document.write("<br>E-mail : " + mail);
+document.write("<br>Address : " + address + " " + zip + " " + nation);
+
+
+
+	function validate(){
+			if(document.getElementById("gender_male").checked){
+				var gd=document.getElementById("gender_male").value;
+				return gd;
+			}else if(document.getElementById("gender_female").checked){
+				var gd1=document.getElementById("gender_female").value;
+				return gd1;
+			
+			}else if(document.getElementById("gender_others").checked){
+				var gd2=document.getElementById("gender_others").value;
+				return gd2;
+			}
+		}
+		
+}
+</script>
+<center><form>
+		<h2 style="text-align:center"><b>STUDENT REGISTRATION FORM</b></h2>
+		<hr style="border:0.5px solid black">
+		<label>First Name :</label>
+		<input type="text" id="fname" placeholder="First Name"><br><br>
+		<label>Last Name :</label>
+		<input type="text" id="lname" placeholder="Last Name"><br><br>
+
+
+
+
+		<label>Gender : </label>
+	<input type="radio" id="gender_male" name="gender">Male
+	<input type="radio" id="gender_female" name="gender">Female
+	<input type="radio" id="gender_other" name="gender">Other<br><br>
+
+
+
+<label>Father's Name :</label>
+<input type="text" id="father" placeholder="Father's Name"><br><br>
+<label>Mother's Name :</label>
+<input type="text" id="mother" placeholder="Mother's Name"><br><br>
+<label>Nationality :</label>
+<input type="text" id="nation" placeholder="Nationality"><br><br>
+<label>Zip Code :</label>
+<input type="text" id="code" placeholder="Enter Your Zip Code"><br><br>
+<label>D-O-B :</label>
+<input type="date" id="dob" placeholder="Enter Date Of Birth"><br><br>
+<label>Email :</label>
+<input type="email" id="mail" placeholder="Enter Mail Id"><br><br>
+<label>Address :</label>
+<input type="text" id="address" placeholder="Enter Your Address"><br><br>
+<button onclick="disp()">Submit</button>
+<button onclick="self.close()">Clear</button>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+	form{
+			border: 2px solid black;
+			width: fit-content;
+			text-align:center;
+			background-color:RGB(247, 202, 201);
+			right-align:200px;
+		}
+	input{
+			font-size:1.1;
+			width:44%;
+			padding:6px;
+		}
+
+
+</style>
+<body>
+
+	<script>
+		function disp(){
+			var first=document.getElementById("fname").value;
+			var last=document.getElementById("lname").value;
+			var father=document.getElementById("father").value;
+			var mother=document.getElementById("mother").value;
+			var nation=document.getElementById("nation").value;
+			var zip=document.getElementById("code").value;
+			var date=document.getElementById("dob").value;
+			var mail=document.getElementById("mail").value;
+			var address=document.getElementById("address").value;
+			document.write(first + last+ father + mother + nation + zip + date + mail + address);
+			
+			document.getElementById("df").innerHTML=first;
+		
+		}
+	
+	</script>
+
+	<form onsubmit="disp()">
+		<h2 style="text-align:center"><b>User Details</b></h2>
+		<hr style="border:0.5px solid black">
+		First Name :
+		<input type="text" id="fname" placeholder="firstname"><br><br>
+		
+		Last Name :
+		<input type="text" id="lname" placeholder="lastname"><br><br>
+		
+		Father's Name :
+		<input type="text" id="father" placeholder="father's name"><br><br>
+		
+		Mother's Name :
+		<input type="text" id="mother" placeholder="mother's name"><br><br>
+		
+		Nationality :
+		<input type="text" id="nation" placeholder="nationality"><br><br>
+		
+		Zip Code :
+		<input type="text" id="code" placeholder="enter your zip code"><br><br>
+		
+		D-O-B :
+		<input type="date" id="dob" placeholder="enter date of birth"><br><br>
+		
+		Email :
+		<input type="email" id="mail" placeholder="enter mail id"><br><br>
+		
+		Address :
+		<input type="text" id="address" placeholder="enter your address"><br><br>
+		
+		
+		
+		
+		
+		
+		<button><a href="display.html">submit</a></button>
+	
+	
+	
+	</form>
+	
+
+
+
+</body>
+</html>
